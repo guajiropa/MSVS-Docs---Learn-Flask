@@ -1,8 +1,17 @@
-from flask import Flask
+from datetime import datetime
+from flask import render_template
 from HelloFlask import app
 
 @app.route('/')
 @app.route('/home')
 def home():
-    return "Good day, you glorious bastards!"
+    now = datetime.now()
+    formatted_now = now.strftime("%A, %B %d, %Y at %X")
+
+    return render_template(
+        "index.html",
+        title = "Hello Flask",
+        message = "Hello, all you glorious bastards!",
+        content = " on " + formatted_now
+        )
 
