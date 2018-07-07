@@ -16,14 +16,20 @@ body
         color: inherit;
     }
 
+    .navbar a:hover {
+        text-decoration: underline;
+        color: coral;
+    }
+
 .navbar-brand {
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-weight: 600;
 }
 
 .navbar-item {
     font-variant: small-caps;
-    margin-left: 30px;
+    margin-left: 34px;
+    float: right;
 }
 
 .body-content {
